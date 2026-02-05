@@ -1,0 +1,13 @@
+# Gerenciador de senha simples
+print("----------------")
+cont = 0
+senha = input("Digite a senha: ")
+while senha != "000":
+    cont += 1
+    print("senha incorreta")
+    if cont == 3:
+        print("bloqueio")
+        break
+    senha = input("Digite a senha novamente: ")
+if senha == "000":
+    print("Acesso liberado!")
