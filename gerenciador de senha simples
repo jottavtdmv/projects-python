@@ -1,13 +1,15 @@
-# Gerenciador de senha simples
-print("----------------")
+# gerenciador de senha
+print("--------------------")
 cont = 0
+senha_correta=input(f'digite a senha correta:')
 senha = input("Digite a senha: ")
-while senha != "000":
+while senha != senha_correta:
     cont += 1
     print("senha incorreta")
     if cont == 3:
         print("bloqueio")
         break
-    senha = input("Digite a senha novamente: ")
-if senha == "000":
-    print("Acesso liberado!")
+    print("erros:", cont)
+    senha = input("Digite a senha dnv: ")
+if senha == senha_correta:
+    print("acesso liberado")
