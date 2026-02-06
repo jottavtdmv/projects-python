@@ -1,0 +1,32 @@
+#calculadora de Cinemática
+#MRU
+print(f'____________________________')
+print(f'calculadora de cinemática MRU')
+print(f'Digite o que deseja calcular:')
+variavel=input(f'(d) para distancia, (v) para velocidade e (t) para tempo: ')
+if variavel == "d":
+    print(f'Digite os valores para velocidade(m/s) e tempo(s):')
+    velocidade=float(input(f'Digite a velocidade em m/s:'))
+    tempo=float(input(f'Digite o tempo em s:'))
+    if tempo== 0:
+        print(f'O tempo não pode ser zero')
+    distancia = velocidade * tempo
+    print('A distância percorrida foi:',distancia,f'metros')
+elif variavel == "v":
+    print(f'Digite os valores para distância(m) e tempo(s)')
+    distancia=float(input(f'Digite a distância em m: '))
+    tempo=float(input(f'Digite o tempo em s: '))
+    if tempo== 0:
+        print(f'O tempo não pode ser zero')
+    velocidade= distancia/tempo
+    print('A velocidade foi de:',velocidade,'m/s')
+elif variavel == "t":
+    print(f'Digite os valores para distância(m) e velocidade(v)')
+    distancia=float(input(f'Digite a distância em m: '))
+    velocidade=float(input(f'Digite a velociade em m/s: '))
+    tempo=distancia/velocidade
+    print('O tempo foi de:',tempo,'segundos')
+else:
+    print(f'Letra inválida')
+
+    
