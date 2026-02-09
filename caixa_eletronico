@@ -1,0 +1,26 @@
+#caixa eletronico
+saldo=float(input(f'Digite seu saldo: '))
+while True:
+    print(f'Digite a operação desejada:')
+    print(f'(1)Sacar ; (2) Depositar ; (3)Sair')
+    op=float(input(f'n°: '))
+    if op == 1:
+        print(f'Operação escolhida: SACAR')
+        valor_saque=float(input(f'Digite o valor do saque: '))
+        if valor_saque <= saldo :
+            print(f'O valor do saque foi:', valor_saque, 'reais')
+            saldo_novo= saldo - valor_saque
+            print('O saldo atual é de: ' , saldo_novo, 'reais')
+        else:
+            print(f'saldo insuficiente')
+    elif op == 2:
+        print(f'Operação escolhida: DEPOSITAR')
+        valor_dep=float(input(f'Digite o valor do depósito: '))
+        saldo_atual= saldo + valor_dep
+        print(f'O saldo atual é de: ', saldo_atual, 'reais')
+    elif op == 3:
+        print(f'Operação cancelada')
+        break
+    else:
+        print(f'\n Número inválido')
+    
