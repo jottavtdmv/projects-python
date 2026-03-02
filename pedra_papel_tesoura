@@ -1,0 +1,43 @@
+#pedra, papel e tesoura
+import random
+print(f'PEDRA, PAPEL E TESOURA')
+while True:
+    user=input(f'Escolha pedra, papel ou tesoura: ')
+    bag=['pedra', 'papel', 'tesoura']
+    bot=random.choice(bag)
+    #print(bot) - resposta do bot
+    cont=0
+    #user = pedra
+    if user == 'pedra' and bot == 'pedra':
+        print(f'empate')
+        print('bot answer:',bot)
+    elif user== 'pedra' and bot == 'papel':
+        print('derrota do user')
+        print('bot answer',bot)
+    elif user == 'pedra' and bot == 'tesoura':
+        print('vitória do user')
+        cont+=1
+        print('bot answer:',bot)
+    #user=papel
+    if user == 'papel' and bot == 'papel':
+        print('empate')
+        print('bot answer:',bot)
+    elif user =='papel' and bot == 'tesoura':
+        print('derrota')
+        print('bot answer:',bot)
+    elif user == 'papel' and bot == 'pedra':
+        print('vitória do user')
+        cont+=1
+        print('bot answer:',bot)
+    #user=tesoura
+    if user == 'tesoura' and bot == 'tesoura':
+        print('empate')
+        print('bot answer',bot)
+    elif user == 'tesoura' and bot == 'pedra':
+        print('derrota')
+        print('bot answer:',bot)
+    elif user == 'tesoura' and bot == 'papel':
+        print('vitória do user')
+        cont+=1
+        print('bot answer:',bot)
+    print(cont)
